@@ -11,38 +11,36 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface MyComponent {
-    'first': string;
-    'last': string;
+  interface ChartJs {
+    'data': any;
   }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    'first'?: string;
-    'last'?: string;
+  interface ChartJsAttributes extends StencilHTMLAttributes {
+    'data'?: any;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'MyComponent': Components.MyComponent;
+    'ChartJs': Components.ChartJs;
   }
 
   interface StencilIntrinsicElements {
-    'my-component': Components.MyComponentAttributes;
+    'chart-js': Components.ChartJsAttributes;
   }
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLChartJsElement extends Components.ChartJs, HTMLStencilElement {}
+  var HTMLChartJsElement: {
+    prototype: HTMLChartJsElement;
+    new (): HTMLChartJsElement;
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement
+    'chart-js': HTMLChartJsElement
   }
 
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'chart-js': HTMLChartJsElement;
   }
 
 
